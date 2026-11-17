@@ -89,14 +89,23 @@ FrontCut.exe -b -c00FF00 -hr -e girl2.png girl2_greenscreen.png
 
 ![Green screen](images/girl2_greenscreen_animation.png)
 
-**Remove object**: remove the foreground and keep the background (transparent hole). With `-i` instead of
-`-f`, the hole is filled with matching background.
+**Remove object**: remove the foreground and keep the background (transparent hole). To fill the hole, see
+the next example.
 
 ```
 FrontCut.exe -f -hr girl2.png girl2_removeobject.png
 ```
 
 ![Remove object](images/girl2_removeobject_animation.png)
+
+**Remove and inpaint object**: remove the foreground and fill the hole with matching background (LaMa
+inpainting).
+
+```
+FrontCut.exe -i -hr girl2.png girl2_inpaint.jpg
+```
+
+![Remove and inpaint object](images/girl2_inpaint_animation.png)
 
 **Bokeh blur**: everything nearer or farther than the subject is blurred, more with more depth difference
 (the animation shows two strengths).
